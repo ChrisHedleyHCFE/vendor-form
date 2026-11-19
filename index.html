@@ -3,125 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Hartlepool College of Further Education: Vendor Compliance Form</title>
 
 <style>
+
+*{
+    box-sizing:border-box;
+}
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f1f5f9;
+    font-family: Arial, Helvetica, sans-serif;
     margin:0;
     padding:20px;
+    background:#f3f4f6;
+    color:#333;
 }
 
 .container{
-    max-width:900px;
+    max-width:950px;
     margin:auto;
-    background:#fff;
+    background:white;
     padding:30px;
     border-radius:20px;
-    box-shadow:0 4px 20px rgba(0,0,0,.1);
+    box-shadow:0 3px 15px rgba(0,0,0,0.15);
 }
 
 .logo{
-    max-height:100px;
     display:block;
-    margin:0 auto 20px;
+    margin:0 auto 20px auto;
+    max-height:110px;
 }
 
 h1{
     text-align:center;
     color:#003865;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:30px;
+    color:#666;
 }
 
 h2{
     color:#003865;
-    border-bottom:1px solid #ddd;
+    border-bottom:2px solid #e5e7eb;
     padding-bottom:8px;
-}
-
-label{
-    display:block;
-    margin-top:12px;
-    font-weight:bold;
-}
-
-input[type=text],
-input[type=email],
-input[type=tel],
-textarea,
-select{
-    width:100%;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    box-sizing:border-box;
-    margin-top:5px;
-}
-
-textarea{
-    min-height:120px;
 }
 
 .section{
     margin-top:30px;
 }
 
-.info-box{
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:120px;
+}
+
+input[type=file]{
+    margin-top:10px;
+}
+
+.notice{
     background:#fff8db;
-    border-left:5px solid #eab308;
+    border-left:6px solid #f59e0b;
     padding:15px;
     margin-top:15px;
+    border-radius:8px;
+}
+
+.food-section{
+    display:none;
+    background:#f8fafc;
+    padding:20px;
+    margin-top:15px;
+    border-radius:12px;
 }
 
 .privacy{
     background:#eff6ff;
-    padding:15px;
-    border-radius:10px;
-    margin-top:20px;
+    padding:20px;
+    border-radius:12px;
+    margin-top:30px;
 }
 
-.button{
+.submit-btn{
+    width:100%;
     background:#00843D;
     color:white;
     border:none;
-    width:100%;
-    padding:15px;
+    padding:18px;
     font-size:18px;
-    border-radius:10px;
+    border-radius:12px;
     cursor:pointer;
+    margin-top:20px;
 }
 
-.button:hover{
-    background:#006d33;
-}
-
-#foodSection{
-    display:none;
+.submit-btn:hover{
+    background:#006d31;
 }
 
 .success{
     display:none;
     text-align:center;
-    background:#ecfdf5;
-    border:1px solid #10b981;
-    padding:20px;
+    background:#dcfce7;
+    border:1px solid #22c55e;
+    padding:25px;
     border-radius:15px;
     margin-top:20px;
 }
+
+.small{
+    font-size:14px;
+    color:#666;
+}
+
+.required{
+    color:red;
+}
+
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
-<img src="logo.jpg"
-alt="Hartlepool College Logo"
-class="logo">
+<img src="logo.jpg" alt="Hartlepool College Logo" class="logo">
 
-<h1>Hartlepool College of Further Education<br>Vendor Compliance Form</h1>
+<h1>Hartlepool College of Further Education</h1>
 
-<p>
+<h1>Vendor Compliance Form</h1>
+
+<p class="subtitle">
 Vendors must complete and return this form, together with supporting documentation,
 before trading or operating on College premises.
 </p>
@@ -130,45 +162,73 @@ before trading or operating on College premises.
 
 <input type="hidden" name="access_key" value="58cbbcf0-c9b8-4a2e-a74e-02d04977b1dd">
 
-<input type="hidden" name="subject" value="Hartlepool College Vendor Compliance Submission">
+<input type="hidden"
+name="subject"
+value="Hartlepool College Vendor Compliance Submission">
 
 <div class="section">
+
 <h2>1. Vendor Details</h2>
 
-<label>Business Name *</label>
+<label>
+Business Name <span class="required">*</span>
+</label>
+
 <input type="text" name="Business Name" required>
 
-<label>Contact Name *</label>
+<label>
+Contact Name <span class="required">*</span>
+</label>
+
 <input type="text" name="Contact Name" required>
 
-<label>Email Address *</label>
-<input type="email" name="Email Address" required>
+<label>
+Contact Email <span class="required">*</span>
+</label>
 
-<label>Telephone Number *</label>
-<input type="tel" name="Telephone Number" required>
+<input type="email" name="Contact Email" required>
 
-<label>Registered Business or Home Postal Address & Postcode *</label>
+<label>
+Contact Telephone <span class="required">*</span>
+</label>
+
+<input type="tel" name="Contact Telephone" required>
+
+<label>
+Registered Business or Home Postal Address & Postcode <span class="required">*</span>
+</label>
+
 <textarea name="Address" required></textarea>
+
 </div>
 
 <div class="section">
+
 <h2>2. Goods and Activities</h2>
 
-<label>List all goods, products or activities offered *</label>
+<label>
+List all goods, products or activities to be offered
+<span class="required">*</span>
+</label>
+
 <textarea name="Goods and Activities" required></textarea>
 
-<div class="info-box">
-<b>Prohibited Items:</b><br>
-Naked flames, bladed items, alcohol, and products lacking required UKCA, CE or CPSR certification.
+<div class="notice">
+<strong>Prohibited Items:</strong><br><br>
+
+Naked flames, bladed items, alcohol and products lacking required UKCA, CE or CPSR certification.
+
 Any changes to declared goods or activities must be notified to the College before the event.
 </div>
+
 </div>
 
 <div class="section">
+
 <h2>3. Public Liability Insurance (PLI)</h2>
 
-<p>
-Upload a PDF certificate or use your mobile device camera to take a photograph.
+<p class="small">
+Upload a PDF certificate or use your mobile phone camera to photograph the certificate.
 </p>
 
 <input
@@ -177,68 +237,110 @@ name="PLI Certificate"
 accept=".pdf,image/*"
 capture="environment"
 required>
+
 </div>
 
 <div class="section">
+
 <h2>4. Food Safety and Allergen Compliance</h2>
 
 <label>
-<input type="radio" name="Food Stall" value="No" required onclick="toggleFood(false)">
- NO - Non-Food Stall
+<input type="radio"
+name="Food Stall"
+value="No"
+onclick="toggleFood(false)"
+required>
+
+NO - Non-Food Stall
 </label>
 
 <label>
-<input type="radio" name="Food Stall" value="Yes" onclick="toggleFood(true)">
- YES - Food / Beverage / Confectionery Stall
+<input type="radio"
+name="Food Stall"
+value="Yes"
+onclick="toggleFood(true)">
+
+YES - Food / Beverage / Confectionery Stall
 </label>
 
-<div id="foodSection">
+<div id="foodSection" class="food-section">
 
-<label>Registered Local Authority Council</label>
-<input type="text" name="Local Authority">
+<label>
+Registered Local Authority Council
+</label>
 
-<label>Current FSA Food Hygiene Rating</label>
+<input type="text" name="Registered Local Authority">
+
+<label>
+Current FSA Food Hygiene Rating
+</label>
+
 <input type="text" name="Food Hygiene Rating">
 
-<p><b>Allergen Declarations</b></p>
+<br><br>
 
 <label>
-<input type="checkbox" name="Natashas Law Compliance">
- Natasha's Law Compliance Confirmed
+<input type="checkbox"
+name="Natashas Law Compliance">
+
+Natasha's Law Compliance confirmed
 </label>
 
 <label>
-<input type="checkbox" name="Written Allergen Information">
- Written allergen information available
+<input type="checkbox"
+name="Written Allergen Information">
+
+Written allergen information available
 </label>
 
 <label>
-<input type="checkbox" name="Food Hygiene Controls">
- Food stored, handled and displayed hygienically
+<input type="checkbox"
+name="Food Hygiene Controls">
+
+Food stored, handled and displayed hygienically
 </label>
 
 </div>
+
 </div>
 
 <div class="section">
+
 <h2>5. Safety Declaration</h2>
 
 <label>
-<input type="checkbox" name="Safety Declaration" required>
- I confirm stock and equipment will be stored safely, displays secured,
- emergency routes kept clear and electrical equipment PAT tested where applicable.
+<input type="checkbox"
+name="Safety Declaration"
+required>
+
+Site Safety Declaration: Stock and equipment will be stored safely, displays secured, emergency routes kept clear and electrical equipment PAT tested where applicable.
 </label>
+
 </div>
 
 <div class="section">
+
 <h2>Signature</h2>
 
-<label>Electronic Signature *</label>
-<input type="text" name="Electronic Signature" required>
+<label>
+Electronic Signature <span class="required">*</span>
+</label>
+
+<input
+type="text"
+name="Electronic Signature"
+placeholder="Type your full name"
+required>
+
 </div>
 
 <div class="section">
+
 <h2>Additional Documents</h2>
+
+<p class="small">
+Additional documents can be uploaded or photographed using your mobile device.
+</p>
 
 <input
 type="file"
@@ -246,71 +348,107 @@ name="Additional Documents"
 multiple
 accept=".pdf,.doc,.docx,image/*"
 capture="environment">
+
 </div>
 
 <div class="privacy">
+
 <h3>Privacy Notice</h3>
 
-Information submitted through this form will be used by Hartlepool College of Further Education solely for vendor compliance, health and safety, safeguarding, insurance and event management purposes. Documents submitted will be retained in accordance with the College's data retention policies and processed in line with UK GDPR and the Data Protection Act 2018.
+Information submitted through this form will be used by Hartlepool College of Further Education solely for vendor compliance, health and safety, safeguarding, insurance and event management purposes.
+
+Documents submitted will be retained in accordance with the College's data retention policies and processed in accordance with UK GDPR and the Data Protection Act 2018.
+
 </div>
 
-<br>
-
-<button type="submit" class="button">
+<button class="submit-btn" type="submit">
 Submit Vendor Compliance Form
 </button>
 
 </form>
 
 <div id="successMessage" class="success">
+
 <h2>✅ Submission Successful</h2>
+
 <p>
-Thank you. Your Vendor Compliance Form has been submitted successfully.
+Thank you. Your Vendor Compliance Form and supporting documents have been submitted successfully.
 </p>
+
 </div>
 
 </div>
 
 <script>
 
-function toggleFood(show){
-    document.getElementById("foodSection").style.display =
-        show ? "block" : "none";
+function toggleFood(show) {
+
+    document.getElementById('foodSection').style.display =
+        show ? 'block' : 'none';
+
 }
 
-const form = document.getElementById("vendorForm");
-
-form.addEventListener("submit", async function(e){
+document
+.getElementById('vendorForm')
+.addEventListener('submit', async function(e) {
 
     e.preventDefault();
 
-    const formData = new FormData(form);
+    let submitButton = document.querySelector('.submit-btn');
 
-    const response = await fetch(
-        "https://api.web3forms.com/submit",
-        {
-            method: "POST",
-            body: formData
-        });
+    submitButton.disabled = true;
+    submitButton.innerText = 'Submitting...';
 
-    const result = await response.json();
+    const formData = new FormData(this);
 
-    if(result.success){
+    try {
 
-        form.style.display = "none";
+        const response = await fetch(
+            'https://api.web3forms.com/submit',
+            {
+                method: 'POST',
+                body: formData
+            }
+        );
 
-        document.getElementById("successMessage").style.display = "block";
+        const result = await response.json();
 
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
-        });
+        if(result.success){
 
-    } else {
+            document
+            .getElementById('vendorForm')
+            .style.display = 'none';
+
+            document
+            .getElementById('successMessage')
+            .style.display = 'block';
+
+            window.scrollTo({
+                top:0,
+                behavior:'smooth'
+            });
+
+        } else {
+
+            alert(
+            'Submission failed. Please try again.'
+            );
+
+            submitButton.disabled = false;
+            submitButton.innerText =
+            'Submit Vendor Compliance Form';
+
+        }
+
+    } catch(error){
 
         alert(
-            "Submission failed. Please check your internet connection and try again."
+        'Unable to submit the form. Please check your connection and try again.'
         );
+
+        submitButton.disabled = false;
+        submitButton.innerText =
+        'Submit Vendor Compliance Form';
 
     }
 
